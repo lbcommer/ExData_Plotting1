@@ -10,7 +10,6 @@ if (!file.exists(file))
 
 data <- read.csv(file, sep=";", na.strings = "?", stringsAsFactors = FALSE)
 
-#data$Time <- strptime(data$Time, format="%H:%M:%S", tz="Europe/Paris")
 data$Datetime <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S", tz="Europe/Paris") 
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 
