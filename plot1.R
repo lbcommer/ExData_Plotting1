@@ -18,7 +18,7 @@ dev.off()
 
 # Create Plot 1
 plot1 <- data[data$Date == "2007-02-01" | data$Date == "2007-02-02"  , "Global_active_power"]
-hist(plot1, col="red", xlab="Global Active Power (kilowatts)")
+hist(plot1, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 
 # Generate png file
 dev.copy(png, file = "plot1.png")
